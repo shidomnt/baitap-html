@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai4</title>
+    <style>
+        table {
+            width: 700px;
+            margin: 0px auto;
+            border-collapse: collapse;
+            border: solid 1px;
+            background-color: #ffc;
+        }
+        
+        table tr td {
+            border: solid 1px;
+            padding: 7px;
+            color: green;
+        }
+        
+        table tr td:first-child {
+            padding-left: 0px;
+        }
+        
+        table tr td:last-child {
+            padding-bottom: 0px;
+            padding-left: 0px;
+        }
+        
+        table tr:last-child td {
+            text-align: center;
+            padding: 0px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #name,
+        #address {
+            width: 70%;
+        }
+        
+        #tel {
+            width: 30%;
+        }
+        
+        #tour optgroup {
+            font-style: italic;
+        }
+        
+        #tour option {
+            font-style: normal;
+        }
+        
+        #doankhach {
+            display: inline-block;
+            margin: 0px 12.5%;
+        }
+        
+        #doankhach legend {
+            font-style: italic;
+            color: black;
+        }
+        
+        #doankhach div {
+            text-align: center;
+            display: inline-block;
+        }
+        
+        #doankhach input[name="quantity"] {
+            width: 15%;
+        }
+        
+        #note {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="header">Đăng kí du lịch</h1>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" name="address" id="address"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="tel" name="tel" id="tel"></td>
+            </tr>
+            <tr>
+                <td>Khách du lịch</td>
+                <td>
+                    <input type="checkbox" name="location" id="vietnam">
+                    <label for="vietnam">Việt Nam</label>
+                    <input type="checkbox" name="location" id="nuocngoai">
+                    <label for="nuocngoai">Nước ngoài</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn tour</td>
+                <td>
+                    <select name="tour" id="tour">
+                        <optgroup label="Miền Bắc">
+                            <option value="">Hà Nội - Hạ long - Sapa</option>
+                            <option value="">Hà Nội - Chùa Hương - Ninh Bình</option>
+                            <option value="">Hà Nội - Cát Bà - Tuần Châu</option>
+                        </optgroup>
+                        <optgroup label="Miền Trung">
+                            <option value="">Huế - Bạch Xã - Đà Nẵng</option>
+                            <option value="">Nha Trang - Đà Lạt</option>
+                            <option value="">Buôn Mê Thuột - Gia Lai - Kon Tum</option>
+                        </optgroup>
+                        <optgroup label="Miền Nam">
+                            <option value="">TPHCM - Mỹ Tho</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phương tiện</td>
+                <td>
+                    <input type="radio" name="vehicle" id="maybay">
+                    <label for="maybay">Máy bay</label>
+                    <input type="radio" name="vehicle" id="xeoto">
+                    <label for="xeoto">Xe ô tô</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset id="doankhach">
+                        <legend>Số lượng đoàn khách</legend>
+                        <div>
+                            <label for="nguoilon">Người lớn</label>
+                            <input type="text" name="quantity" id="nguoilon">
+                            <label for="treem">Trẻ em</label>
+                            <input type="text" name="quantity" id="treem">
+                        </div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>Ghi chú thêm</td>
+                <td>
+                    <textarea name="note" id="note" rows="2"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Đồng ý</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
