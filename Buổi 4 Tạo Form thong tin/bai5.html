@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai5</title>
+    <style>
+        #header {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+        
+        hr {
+            border: solid 2px #f20904;
+            width: 70%;
+        }
+        
+        table {
+            margin: 0px auto;
+            width: 70%;
+        }
+        
+        table tr td {
+            padding: 5px;
+        }
+        
+        table tr td:first-child {
+            text-align: right;
+        }
+        
+        table tr td:first-child::after {
+            display: inline;
+            content: ':';
+        }
+        
+        table tr:last-child td:first-child {
+            visibility: hidden;
+        }
+        
+        img#lachong {
+            float: left;
+        }
+        
+        img#flash,
+        img#dreamweaver,
+        img#adobe {
+            float: right;
+        }
+        
+        #name,
+        #email {
+            width: 80%;
+        }
+        
+        #address {
+            width: 90%;
+        }
+        
+        #age {
+            width: 10%;
+        }
+        
+        #request {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top-banner">
+        <img src="./Images/lachong.gif" alt="lachong" id="lachong">
+        <img src="./Images/adobe.gif" alt="adobe" id="adobe">
+        <img src="./Images/dreamweaver.gif" alt="dreamweaver" id="dreamweaver">
+        <img src="./Images/Flash.gif" alt="flash" id="flash">
+    </div>
+    <div style="clear: both;"></div>
+    <hr>
+    <h1 id="header">Phiếu đăng kí</h1>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>Họ và tên</td>
+                <td>
+                    <input required type="text" name="name" id="name">
+                    <label for="name">(*)</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td>
+                    <input type="text" name="address" id="address">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input required type="email" name="email" id="email">
+                    <label for="email">(*)</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Nam</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Tuổi</td>
+                <td>
+                    <input required type="number" name="age" id="age" min="0" max="113">
+                    <label for="age">(*)</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Sở thích</td>
+                <td>
+                    <input type="checkbox" name="thethao" id="thethao">
+                    <label for="thethao">Thể thao</label><br>
+                    <input type="checkbox" name="vanhoc" id="vanhoc">
+                    <label for="vanhoc">Văn học</label><br>
+                    <input type="checkbox" name="cntt" id="cntt">
+                    <label for="cntt">Công nghệ thông tin</label><br>
+                    <input type="checkbox" name="lichsu" id="lichsu">
+                    <label for="lichsu">Lịch sử</label><br>
+                    <input type="checkbox" name="game" id="game">
+                    <label for="game">Game</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Chuyên ngành</td>
+                <td>
+                    <select name="major" id="major">
+                        <option value="">Công nghệ Web</option>
+                        <option value="">Lập trình ứng dụng</option>
+                        <option value="">Thiết kế đồ họa</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Gởi hình</td>
+                <td>
+                    <input type="file" name="avatar" id="avatar" accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td>Yêu cầu</td>
+                <td>
+                    <textarea name="request" id="request" cols="30" rows="4"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Gửi thông tin</button>
+                    <button type="reset">Nhập lại</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
